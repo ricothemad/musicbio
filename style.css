@@ -41,7 +41,7 @@ body {
 
 #userName {
     color: var(--accentColor);
-    font-size: 1.25rem;
+    font-size: 1.00rem;
     font-weight: 400;
     line-height: 1;
     display: block;
@@ -52,12 +52,27 @@ body {
 }
 
 #links {
-    max-width: 675px;
+    /* max-width: 675px;  */
+    max-width: 675px; 
     width: auto;
     display: block;
-    margin: 27px auto;
+    margin: 20px auto;
+    /* margin-left: 10px;
+    margin-right: 10px; */
     border: solid var(--accentColor) 2px;
     border-radius: 1px;
+}
+
+.coolText {
+    color: var(--accentColor);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+    font-family: var(--spicyFont);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
 }
 
 .linkHeader {
@@ -77,8 +92,9 @@ body {
     /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
 }
+
 .bio {
-    color: var(--accentColor3);
+    color: var(--accentColor4);
     position: relative;
     background-color: transparent;
     
@@ -111,6 +127,45 @@ body {
     /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
 }
+
+.linkBadge {
+    position: relative;
+    background-color: transparent;
+    color: var(--accentColor);
+    border: solid var(--accentColor2) 2px;
+    border-radius: 10px;
+    font-size: 1rem;
+    max-width: 40px;
+    height: 40px;
+    text-align:center;
+    /* display:block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px; /* 17px */
+    text-decoration: none;
+    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
+    -webkit-tap-highlight-color: transparent;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+  }
+  
+  .square {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    background-color: #1E1E1E;
+    color: #fff;
+    border: solid var(--accentColor2) 2px;
+    border-radius: 10px;
+  }
 
 @media (hover: hover) {
     .link:hover {
@@ -145,6 +200,49 @@ body {
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
+/* Drawers & Components */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: #555;
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .photo {
+    background-image: url('images/avatar.jpg');
+    height: 100%;
+    width: 100%;
+    
+  }
+  .content {
+    /* margin: 10px; */
+    /* padding: 0 18px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: transparent;
+  }
 
 /*-------------------------animations-----------------------*/
 @keyframes transitionAnimation {
