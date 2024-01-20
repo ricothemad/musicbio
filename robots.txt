@@ -1,2 +1,0 @@
-Sitemap: https://www.fr0stpunk.com/sitemap.xml
-User-agent: *
